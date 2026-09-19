@@ -1,0 +1,230 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1">
+<meta charset="utf-8">
+<title>Reusable Peptide Order Form — 103 Items</title>
+<style>
+body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;margin:0;background:#f4f4f4;color:#111}
+.wrap{max-width:760px;margin:auto;padding:16px}
+h1{font-size:24px;margin:4px 0 4px}
+.sub{color:#666;font-size:13px;margin-bottom:16px}
+.card{background:white;border-radius:14px;padding:16px;margin-bottom:14px;box-shadow:0 1px 5px #ddd}
+label{display:block;font-weight:600;font-size:13px;margin:10px 0 5px}
+input,select,button{font:inherit;box-sizing:border-box}
+input,select{width:100%;padding:11px;border:1px solid #bbb;border-radius:9px;background:#fff}
+button{border:0;border-radius:10px;padding:12px 14px;font-weight:700}
+.add{width:100%;background:#222;color:#fff;margin-top:12px}
+.reset{background:#eee;margin-right:8px}
+.print{background:#222;color:#fff}
+.row{border:1px solid #ddd;border-radius:11px;padding:12px;margin:10px 0}
+.grid{display:grid;grid-template-columns:1fr 90px;gap:8px}
+.qtygrid{display:grid;grid-template-columns:1fr 1fr;gap:8px;margin-top:8px}
+.price{font-size:12px;color:#666;margin-top:5px}
+.total{font-size:24px;font-weight:800;text-align:right;margin-top:12px}
+.small{font-size:11px;color:#666}
+@media print{body{background:#fff} .no-print{display:none!important} .card{box-shadow:none;border:0} input,select{border:0;padding:2px}}
+</style>
+</head>
+<body>
+<div class="wrap">
+<div class="card">
+<h1>Customer Order Form</h1>
+<div class="sub">Reusable master template — all catalog items are built into this file. Fill it out, then print or save a copy for each customer.</div>
+<label>Customer Name</label><input id="name" autocomplete="name">
+<label>Phone</label><input id="phone" type="tel" autocomplete="tel">
+<label>Email</label><input id="email" type="email" autocomplete="email">
+<label>Address</label><input id="address" autocomplete="street-address">
+<label>Order Date</label><input id="date" type="date">
+</div>
+
+<div class="card no-print">
+<label>Add Item</label>
+<select id="product">
+  <option value="">Select an item…</option>
+  <option value="0">TR5 — TIRZEPATIDE 5 — Kit $90.00 — Single $13.50</option>
+  <option value="1">TR10 — TIRZEPATIDE 10 — Kit $130.00 — Single $19.50</option>
+  <option value="2">TR15 — TIRZEPATIDE 15 — Kit $160.00 — Single $24.00</option>
+  <option value="3">TR20 — TIRZEPATIDE 20 — Kit $185.00 — Single $28.50</option>
+  <option value="4">TR30 — TIRZEPATIDE 30 — Kit $230.00 — Single $34.50</option>
+  <option value="5">TR40 — TIRZEPATIDE 40 — Kit $290.00 — Single $43.50</option>
+  <option value="6">TR50 — TIRZEPATIDE 50 — Kit $340.00 — Single $52.50</option>
+  <option value="7">TR60 — TIRZEPATIDE 60 — Kit $380.00 — Single $57.00</option>
+  <option value="8">TR100 — TIRZEPATIDE 100 — Kit $620.00 — Single $66.00</option>
+  <option value="9">RT5 — RETATRUTIDE 5 — Kit $150.00 — Single $22.50</option>
+  <option value="10">RT10 — RETATRUTIDE 10 — Kit $240.00 — Single $36.00</option>
+  <option value="11">RT15 — RETATRUTIDE 15 — Kit $280.00 — Single $42.00</option>
+  <option value="12">RT20 — RETATRUTIDE 20 — Kit $320.00 — Single $48.00</option>
+  <option value="13">RT30 — RETATRUTIDE 30 — Kit $410.00 — Single $61.50</option>
+  <option value="14">RT40 — RETATRUTIDE 40 — Kit $510.00 — Single $76.50</option>
+  <option value="15">RT50 — RETATRUTIDE 50 — Kit $610.00 — Single $91.50</option>
+  <option value="16">RT60 — RETATRUTIDE 60 — Kit $710.00 — Single $106.50</option>
+  <option value="17">NJ100 — NAD+ 100 — Kit $100.00 — Single $15.00</option>
+  <option value="18">NJ500 — NAD+ 500 — Kit $160.00 — Single $24.00</option>
+  <option value="19">NJ1000 — NAD+ 1000 — Kit $320.00 — Single $48.00</option>
+  <option value="20">H10 — HGH 10iu — Kit $120.00 — Single $18.00</option>
+  <option value="21">H15 — HGH 15iu — Kit $170.00 — Single $25.50</option>
+  <option value="22">H24 — HGH 24iu — Kit $260.00 — Single $39.00</option>
+  <option value="23">CU50 — GHK-CU 50 — Kit $70.00 — Single $10.50</option>
+  <option value="24">CU100 — GHK-CU 100 — Kit $130.00 — Single $19.50</option>
+  <option value="25">TESA5 — TESMORELIN 5 — Kit $230.00 — Single $34.50</option>
+  <option value="26">TESA10 — TESMORELIN 10 — Kit $400.00 — Single $60.00</option>
+  <option value="27">TESA20 — TESMORELIN 20 — Kit $700.00 — Single $105.00</option>
+  <option value="28">TI13 — TESMORELIN+IPA 10MG/TES+3MG/IPA — Kit $420.00 — Single $63.00</option>
+  <option value="29">BPC5 — BPC-157 5 — Kit $90.00 — Single $13.50</option>
+  <option value="30">BPC10 — BPC-157 10 — Kit $140.00 — Single $21.00</option>
+  <option value="31">BPC20 — BPC-157 20 — Kit $260.00 — Single $29.00</option>
+  <option value="32">TB5 — TB500 5 — Kit $190.00 — Single $28.50</option>
+  <option value="33">TB10 — TB500 10 — Kit $340.00 — Single $51.00</option>
+  <option value="34">BB10 — BCP5+TB5 WOLVERINE BLEND — Kit $240.00 — Single $36.00</option>
+  <option value="35">BB20 — BCP10+TB10 WOLVERINE BLEND — Kit $420.00 — Single $63.00</option>
+  <option value="36">BB40 — BCP20+TB20 WOLVERINE BLEND — Kit $800.00 — Single $120.00</option>
+  <option value="37">AOD5 — AOD9604 5 — Kit $200.00 — Single $30.00</option>
+  <option value="38">AOD10 — AOD9604 10 — Kit $360.00 — Single $54.00</option>
+  <option value="39">MS10 — MOTS-C 10 — Kit $140.00 — Single $21.00</option>
+  <option value="40">MS20 — MOTS-C 20 — Kit $260.00 — Single $29.00</option>
+  <option value="41">MS40 — MOTS-C 40 — Kit $480.00 — Single $72.00</option>
+  <option value="42">SK10 — SELANIK 10 — Kit $150.00 — Single $22.50</option>
+  <option value="43">XA10 — SEMAX 10 — Kit $150.00 — Single $22.50</option>
+  <option value="44">20SS — SEMAX+SELANK 20 — Kit $280.00 — Single $42.00</option>
+  <option value="45">TA5 — THYMOSIN ALPHA-1 5 — Kit $220.00 — Single $33.00</option>
+  <option value="46">TA10 — THYMOSIN ALPHA-1 10 — Kit $350.00 — Single $52.50</option>
+  <option value="47">DS5 — DSIP 5 — Kit $90.00 — Single $13.50</option>
+  <option value="48">DS10 — DSIP 10 — Kit $180.00 — Single $27.00</option>
+  <option value="49">CP10 — CJC-1295 NO DAC 5MG+IPA5MG — Kit $240.00 — Single $36.00</option>
+  <option value="50">CP20 — CJC-1295 NO DAC 10MG+IPA10MG — Kit $460.00 — Single $69.00</option>
+  <option value="51">IP5 — IPAMORELIN 5 — Kit $90.00 — Single $13.50</option>
+  <option value="52">IP10 — IPAMORELIN 10 — Kit $160.00 — Single $24.00</option>
+  <option value="53">GK5 — HCG 500IU — Kit $170.00 — Single $25.50</option>
+  <option value="54">CGL5 — CARGRI LINTIDE 5 — Kit $250.00 — Single $37.50</option>
+  <option value="55">CGL10 — CARGRI LINTIDE 10 — Kit $460.00 — Single $69.00</option>
+  <option value="56">SMO5 — SERMORELIN ACETATE 5 — Kit $150.00 — Single $22.50</option>
+  <option value="57">SMO10 — SERMORELIN ACETATE 10 — Kit $310.00 — Single $46.50</option>
+  <option value="58">PT141 — PT-141 10 — Kit $120.00 — Single $18.00</option>
+  <option value="59">BBG50 — GLOW ghk35+tb5+bpc10 — Kit $400.00 — Single $60.00</option>
+  <option value="60">BBG70 — GLOW ghk50+tb10+bpc10 — Kit $460.00 — Single $69.00</option>
+  <option value="61">OT10 — OXYTOCIN ACETATE 10 — Kit $250.00 — Single $37.50</option>
+  <option value="62">LL375 — LL37 5 — Kit $210.00 — Single $31.50</option>
+  <option value="63">GT600 — GLUTATHIONE 600 — Kit $80.00 — Single $12.00</option>
+  <option value="64">GT1500 — GLUTATHIONE 1500 — Kit $180.00 — Single $27.00</option>
+  <option value="65">SNP10 — SNAP 10 — Kit $100.00 — Single $15.00</option>
+  <option value="66">LPCB — LI PO-C 10 — Kit $160.00 — Single $24.00</option>
+  <option value="67">LPC — LI PO-C W/O B12 10 — Kit $110.00 — Single $16.50</option>
+  <option value="68">LB — LEMON BOTTLE 10 — Kit $160.00 — Single $24.00</option>
+  <option value="69">MT1 — MELONOTAN 1 10 — Kit $130.00 — Single $19.50</option>
+  <option value="70">MT210 — MELONOTAN 2 10 — Kit $130.00 — Single $19.50</option>
+  <option value="71">2S10 — SS-31 10 — Kit $220.00 — Single $33.00</option>
+  <option value="72">2S50 — SS-31 50 — Kit $810.00 — Single $135.00</option>
+  <option value="73">BBGK — KLOW ghk50+kpv10+bpc10+tb10 — Kit $500.00 — Single $75.00</option>
+  <option value="74">5A5 — 5-AMINO-1MQ 5 — Kit $130.00 — Single $19.50</option>
+  <option value="75">5A10 — 5-AMINO-1MQ 10 — Kit $220.00 — Single $33.00</option>
+  <option value="76">5A220 — 5-AMINO-1MQ 20 — Kit $270.00 — Single $41.50</option>
+  <option value="77">5A50 — 5-AMINO-1MQ 50 — Kit $320.00 — Single $48.00</option>
+  <option value="78">KS5 — KISSPEPTIN 5 — Kit $150.00 — Single $22.50</option>
+  <option value="79">KS10 — KISSPEPTIN 10 — Kit $260.00 — Single $39.00</option>
+  <option value="80">PN5 — PINEALON 5 — Kit $180.00 — Single $27.00</option>
+  <option value="81">PE10 — PE-22-28 10 — Kit $150.00 — Single $22.50</option>
+  <option value="82">IG1 — IGF-1 LR3 1 — Kit $400.00 — Single $60.00</option>
+  <option value="83">RA10 — ARA-290 10 — Kit $150.00 — Single $22.50</option>
+  <option value="84">AA — ACETIC ACID 3ML — Kit $16.00 — Single N/A</option>
+  <option value="85">SM5 — SEMAGLUTIDE 5 — Kit $80.00 — Single $12.00</option>
+  <option value="86">SM10 — SEMAGLUTIDE 10 — Kit $130.00 — Single $19.50</option>
+  <option value="87">SM15 — SEMAGLUTIDE 15 — Kit $150.00 — Single $22.50</option>
+  <option value="88">SM20 — SEMAGLUTIDE 20 — Kit $180.00 — Single $27.00</option>
+  <option value="89">SM30 — SEMAGLUTIDE 30 — Kit $220.00 — Single $33.00</option>
+  <option value="90">KVP — KPV 10 — Kit $140.00 — Single $21.00</option>
+  <option value="91">ET10 — EPITHALON 10 — Kit $80.00 — Single $12.00</option>
+  <option value="92">ET50 — EPITHALON 50 — Kit $350.00 — Single $52.50</option>
+  <option value="93">CD5 — CJC-1295 W/DAC 5 — Kit $380.00 — Single $57.00</option>
+  <option value="94">CND5 — CJC-1295 W/O DAC 5 — Kit $190.00 — Single $28.50</option>
+  <option value="95">CND10 — CJC-1295 W/O DAC 10 — Kit $370.00 — Single $55.50</option>
+  <option value="96">GRP-2 — GRP-2 10 — Kit $80.00 — Single $12.00</option>
+  <option value="97">VP10 — VIP 10 — Kit $200.00 — Single $30.00</option>
+  <option value="98">SUR10 — SURVODUTIDE 10 — Kit $520.00 — Single $78.00</option>
+  <option value="99">ADMAX — ADAMAX 10 — Kit $240.00 — Single $36.00</option>
+  <option value="100">CAR20 — CARTALAX 20 — Kit $240.00 — Single $36.00</option>
+  <option value="101">BA3 — BAC WATER 3 — Kit $20.00 — Single N/A</option>
+  <option value="102">BA10 — BAC WATER 10 — Kit $36.00 — Single N/A</option>
+</select>
+<div class="qtygrid">
+<div><label>Kit Quantity</label><input id="kitQty" type="number" min="0" step="1" value="0"></div>
+<div><label>Single Vial Quantity</label><input id="singleQty" type="number" min="0" step="1" value="0"></div>
+</div>
+<button type="button" class="add" id="addItemBtn">+ Add Item to Order</button>
+</div>
+
+<div class="card">
+<h2 style="font-size:18px;margin-top:0">Order</h2>
+<div id="order"><div class="small">No items added yet.</div></div>
+<div class="total">Total: $<span id="grand">0.00</span></div>
+</div>
+
+<div class="card no-print">
+<button type="button" class="reset" id="resetBtn">New / Reset Order</button>
+<button type="button" class="print" id="printBtn">Print / Save PDF</button>
+<p class="small">For reuse: keep this file as your blank master. For each customer, open it, enter the order, then use Print / Save PDF to create a completed copy.</p>
+</div>
+</div>
+
+<script>
+const catalog=[{"code": "TR5", "name": "TIRZEPATIDE 5", "single": 13.5, "kit": 90}, {"code": "TR10", "name": "TIRZEPATIDE 10", "single": 19.5, "kit": 130}, {"code": "TR15", "name": "TIRZEPATIDE 15", "single": 24, "kit": 160}, {"code": "TR20", "name": "TIRZEPATIDE 20", "single": 28.5, "kit": 185}, {"code": "TR30", "name": "TIRZEPATIDE 30", "single": 34.5, "kit": 230}, {"code": "TR40", "name": "TIRZEPATIDE 40", "single": 43.5, "kit": 290}, {"code": "TR50", "name": "TIRZEPATIDE 50", "single": 52.5, "kit": 340}, {"code": "TR60", "name": "TIRZEPATIDE 60", "single": 57, "kit": 380}, {"code": "TR100", "name": "TIRZEPATIDE 100", "single": 66, "kit": 620}, {"code": "RT5", "name": "RETATRUTIDE 5", "single": 22.5, "kit": 150}, {"code": "RT10", "name": "RETATRUTIDE 10", "single": 36, "kit": 240}, {"code": "RT15", "name": "RETATRUTIDE 15", "single": 42, "kit": 280}, {"code": "RT20", "name": "RETATRUTIDE 20", "single": 48, "kit": 320}, {"code": "RT30", "name": "RETATRUTIDE 30", "single": 61.5, "kit": 410}, {"code": "RT40", "name": "RETATRUTIDE 40", "single": 76.5, "kit": 510}, {"code": "RT50", "name": "RETATRUTIDE 50", "single": 91.5, "kit": 610}, {"code": "RT60", "name": "RETATRUTIDE 60", "single": 106.5, "kit": 710}, {"code": "NJ100", "name": "NAD+ 100", "single": 15, "kit": 100}, {"code": "NJ500", "name": "NAD+ 500", "single": 24, "kit": 160}, {"code": "NJ1000", "name": "NAD+ 1000", "single": 48, "kit": 320}, {"code": "H10", "name": "HGH 10iu", "single": 18, "kit": 120}, {"code": "H15", "name": "HGH 15iu", "single": 25.5, "kit": 170}, {"code": "H24", "name": "HGH 24iu", "single": 39, "kit": 260}, {"code": "CU50", "name": "GHK-CU 50", "single": 10.5, "kit": 70}, {"code": "CU100", "name": "GHK-CU 100", "single": 19.5, "kit": 130}, {"code": "TESA5", "name": "TESMORELIN 5", "single": 34.5, "kit": 230}, {"code": "TESA10", "name": "TESMORELIN 10", "single": 60, "kit": 400}, {"code": "TESA20", "name": "TESMORELIN 20", "single": 105, "kit": 700}, {"code": "TI13", "name": "TESMORELIN+IPA 10MG/TES+3MG/IPA", "single": 63, "kit": 420}, {"code": "BPC5", "name": "BPC-157 5", "single": 13.5, "kit": 90}, {"code": "BPC10", "name": "BPC-157 10", "single": 21, "kit": 140}, {"code": "BPC20", "name": "BPC-157 20", "single": 29, "kit": 260}, {"code": "TB5", "name": "TB500 5", "single": 28.5, "kit": 190}, {"code": "TB10", "name": "TB500 10", "single": 51, "kit": 340}, {"code": "BB10", "name": "BCP5+TB5 WOLVERINE BLEND", "single": 36, "kit": 240}, {"code": "BB20", "name": "BCP10+TB10 WOLVERINE BLEND", "single": 63, "kit": 420}, {"code": "BB40", "name": "BCP20+TB20 WOLVERINE BLEND", "single": 120, "kit": 800}, {"code": "AOD5", "name": "AOD9604 5", "single": 30, "kit": 200}, {"code": "AOD10", "name": "AOD9604 10", "single": 54, "kit": 360}, {"code": "MS10", "name": "MOTS-C 10", "single": 21, "kit": 140}, {"code": "MS20", "name": "MOTS-C 20", "single": 29, "kit": 260}, {"code": "MS40", "name": "MOTS-C 40", "single": 72, "kit": 480}, {"code": "SK10", "name": "SELANIK 10", "single": 22.5, "kit": 150}, {"code": "XA10", "name": "SEMAX 10", "single": 22.5, "kit": 150}, {"code": "20SS", "name": "SEMAX+SELANK 20", "single": 42, "kit": 280}, {"code": "TA5", "name": "THYMOSIN ALPHA-1 5", "single": 33, "kit": 220}, {"code": "TA10", "name": "THYMOSIN ALPHA-1 10", "single": 52.5, "kit": 350}, {"code": "DS5", "name": "DSIP 5", "single": 13.5, "kit": 90}, {"code": "DS10", "name": "DSIP 10", "single": 27, "kit": 180}, {"code": "CP10", "name": "CJC-1295 NO DAC 5MG+IPA5MG", "single": 36, "kit": 240}, {"code": "CP20", "name": "CJC-1295 NO DAC 10MG+IPA10MG", "single": 69, "kit": 460}, {"code": "IP5", "name": "IPAMORELIN 5", "single": 13.5, "kit": 90}, {"code": "IP10", "name": "IPAMORELIN 10", "single": 24, "kit": 160}, {"code": "GK5", "name": "HCG 500IU", "single": 25.5, "kit": 170}, {"code": "CGL5", "name": "CARGRI LINTIDE 5", "single": 37.5, "kit": 250}, {"code": "CGL10", "name": "CARGRI LINTIDE 10", "single": 69, "kit": 460}, {"code": "SMO5", "name": "SERMORELIN ACETATE 5", "single": 22.5, "kit": 150}, {"code": "SMO10", "name": "SERMORELIN ACETATE 10", "single": 46.5, "kit": 310}, {"code": "PT141", "name": "PT-141 10", "single": 18, "kit": 120}, {"code": "BBG50", "name": "GLOW ghk35+tb5+bpc10", "single": 60, "kit": 400}, {"code": "BBG70", "name": "GLOW ghk50+tb10+bpc10", "single": 69, "kit": 460}, {"code": "OT10", "name": "OXYTOCIN ACETATE 10", "single": 37.5, "kit": 250}, {"code": "LL375", "name": "LL37 5", "single": 31.5, "kit": 210}, {"code": "GT600", "name": "GLUTATHIONE 600", "single": 12, "kit": 80}, {"code": "GT1500", "name": "GLUTATHIONE 1500", "single": 27, "kit": 180}, {"code": "SNP10", "name": "SNAP 10", "single": 15, "kit": 100}, {"code": "LPCB", "name": "LI PO-C 10", "single": 24, "kit": 160}, {"code": "LPC", "name": "LI PO-C W/O B12 10", "single": 16.5, "kit": 110}, {"code": "LB", "name": "LEMON BOTTLE 10", "single": 24, "kit": 160}, {"code": "MT1", "name": "MELONOTAN 1 10", "single": 19.5, "kit": 130}, {"code": "MT210", "name": "MELONOTAN 2 10", "single": 19.5, "kit": 130}, {"code": "2S10", "name": "SS-31 10", "single": 33, "kit": 220}, {"code": "2S50", "name": "SS-31 50", "single": 135, "kit": 810}, {"code": "BBGK", "name": "KLOW ghk50+kpv10+bpc10+tb10", "single": 75, "kit": 500}, {"code": "5A5", "name": "5-AMINO-1MQ 5", "single": 19.5, "kit": 130}, {"code": "5A10", "name": "5-AMINO-1MQ 10", "single": 33, "kit": 220}, {"code": "5A220", "name": "5-AMINO-1MQ 20", "single": 41.5, "kit": 270}, {"code": "5A50", "name": "5-AMINO-1MQ 50", "single": 48, "kit": 320}, {"code": "KS5", "name": "KISSPEPTIN 5", "single": 22.5, "kit": 150}, {"code": "KS10", "name": "KISSPEPTIN 10", "single": 39, "kit": 260}, {"code": "PN5", "name": "PINEALON 5", "single": 27, "kit": 180}, {"code": "PE10", "name": "PE-22-28 10", "single": 22.5, "kit": 150}, {"code": "IG1", "name": "IGF-1 LR3 1", "single": 60, "kit": 400}, {"code": "RA10", "name": "ARA-290 10", "single": 22.5, "kit": 150}, {"code": "AA", "name": "ACETIC ACID 3ML", "single": null, "kit": 16}, {"code": "SM5", "name": "SEMAGLUTIDE 5", "single": 12, "kit": 80}, {"code": "SM10", "name": "SEMAGLUTIDE 10", "single": 19.5, "kit": 130}, {"code": "SM15", "name": "SEMAGLUTIDE 15", "single": 22.5, "kit": 150}, {"code": "SM20", "name": "SEMAGLUTIDE 20", "single": 27, "kit": 180}, {"code": "SM30", "name": "SEMAGLUTIDE 30", "single": 33, "kit": 220}, {"code": "KVP", "name": "KPV 10", "single": 21, "kit": 140}, {"code": "ET10", "name": "EPITHALON 10", "single": 12, "kit": 80}, {"code": "ET50", "name": "EPITHALON 50", "single": 52.5, "kit": 350}, {"code": "CD5", "name": "CJC-1295 W/DAC 5", "single": 57, "kit": 380}, {"code": "CND5", "name": "CJC-1295 W/O DAC 5", "single": 28.5, "kit": 190}, {"code": "CND10", "name": "CJC-1295 W/O DAC 10", "single": 55.5, "kit": 370}, {"code": "GRP-2", "name": "GRP-2 10", "single": 12, "kit": 80}, {"code": "VP10", "name": "VIP 10", "single": 30, "kit": 200}, {"code": "SUR10", "name": "SURVODUTIDE 10", "single": 78, "kit": 520}, {"code": "ADMAX", "name": "ADAMAX 10", "single": 36, "kit": 240}, {"code": "CAR20", "name": "CARTALAX 20", "single": 36, "kit": 240}, {"code": "BA3", "name": "BAC WATER 3", "single": null, "kit": 20}, {"code": "BA10", "name": "BAC WATER 10", "single": null, "kit": 36}];
+let order=[];
+
+function money(x){ return Number(x).toFixed(2); }
+
+function render(){
+  const box=document.getElementById("order");
+  const grand=document.getElementById("grand");
+  box.innerHTML="";
+  let total=0;
+  if(order.length===0){ box.innerHTML='<div class="small">No items added yet.</div>'; grand.textContent="0.00"; return; }
+  order.forEach(function(x, idx){
+    const line=(x.k*x.p.kit)+((x.p.single==null)?0:(x.s*x.p.single));
+    total += line;
+    const row=document.createElement("div"); row.className="row";
+    row.innerHTML='<div class="grid"><div><b>'+x.p.code+'</b> — '+x.p.name+'</div><button type="button" class="no-print removeBtn">Remove</button></div>' +
+      '<div class="price">Kit: $'+money(x.p.kit)+(x.p.single==null?' · Single: N/A':' · Single: $'+money(x.p.single))+'</div>' +
+      '<div class="price">Kit qty: '+x.k+' · Single qty: '+x.s+' · Line total: <b>$'+money(line)+'</b></div>';
+    row.querySelector(".removeBtn").addEventListener("click",function(){ order.splice(idx,1); render(); });
+    box.appendChild(row);
+  });
+  grand.textContent=money(total);
+}
+
+function addItem(){
+  const product=document.getElementById("product");
+  const i=parseInt(product.value,10);
+  if(Number.isNaN(i)){ alert("Select an item first."); return; }
+  const p=catalog[i];
+  const k=Math.max(0,parseInt(document.getElementById("kitQty").value,10)||0);
+  const s=Math.max(0,parseInt(document.getElementById("singleQty").value,10)||0);
+  if(k===0 && s===0){ alert("Enter a kit or single-vial quantity."); return; }
+  order.push({p:p,k:k,s:s});
+  product.selectedIndex=0;
+  document.getElementById("kitQty").value=0;
+  document.getElementById("singleQty").value=0;
+  render();
+}
+
+function newOrder(){
+  if(!confirm("Clear this order and start a new customer order?")) return;
+  order=[];
+  ["name","phone","email","address"].forEach(function(id){document.getElementById(id).value="";});
+  document.getElementById("date").valueAsDate=new Date();
+  document.getElementById("product").selectedIndex=0;
+  document.getElementById("kitQty").value=0;
+  document.getElementById("singleQty").value=0;
+  render();
+}
+
+function init(){
+  document.getElementById("date").valueAsDate=new Date();
+  document.getElementById("addItemBtn").addEventListener("click",addItem);
+  document.getElementById("resetBtn").addEventListener("click",newOrder);
+  document.getElementById("printBtn").addEventListener("click",function(){window.print();});
+  render();
+}
+if(document.readyState==="loading") document.addEventListener("DOMContentLoaded",init); else init();
+</script>
+</body>
+</html>
